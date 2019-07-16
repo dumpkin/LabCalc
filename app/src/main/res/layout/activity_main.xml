@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".MainActivity">
+
+        <LinearLayout
+            android:id="@+id/imageContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/imgLab"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:id="@+id/imgCmyk"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/valuesContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/labLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/lValue"
+                    layout="@layout/layout_picker" />
+
+                <include
+                    android:id="@+id/aValue"
+                    layout="@layout/layout_picker" />
+
+                <include
+                    android:id="@+id/bValue"
+                    layout="@layout/layout_picker" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/cmykLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <include
+                    android:id="@+id/cValue"
+                    layout="@layout/layout_picker" />
+
+                <include
+                    android:id="@+id/mValue"
+                    layout="@layout/layout_picker" />
+
+                <include
+                    android:id="@+id/yValue"
+                    layout="@layout/layout_picker" />
+
+                <include
+                    android:id="@+id/kValue"
+                    layout="@layout/layout_picker" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/btnCalculate"
+            android:text="@string/calculate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+</layout>
